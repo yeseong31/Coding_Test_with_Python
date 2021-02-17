@@ -29,21 +29,3 @@ print(len(comb))
 # 1 5 4 3 2 4 5 2
 # 출력 예시
 # 25
-
-# 2021.02.17
-# 위처럼 문제를 풀게 되면 '시간 초과'로 통과되지 못 함.
-# A를 기준으로 무게가 낮은 볼링공부터 무게가 높은 볼링공까지 순서대로 하나씩 확인하여 해결한다.
-n, m = map(int, input().split())
-data = list(map(int, input().split()))
-
-# 공의 개수 카운트
-d = [0] * 11
-for x in data:
-    d[x] += 1
-
-result = 0
-for i in range(1, m + 1):
-    n -= d[i]
-    result += d[i] * n
-
-print(result)
