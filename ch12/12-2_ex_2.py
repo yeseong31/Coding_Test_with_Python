@@ -26,3 +26,15 @@ print(result)
 # AJKDLSI412K4JSJ9D
 # 출력 예시
 # ADDIJJJKKLSS20
+
+# 2020.02.18
+# 또 다른 풀이
+s = sorted(list(input()))
+n = 0
+for i in range(len(s)):
+    if s[i].isdigit():
+        n += int(s[i])
+        idx = i
+    else:
+        break
+print(''.join(s[idx + 1:]), n, sep='')
