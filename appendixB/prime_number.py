@@ -10,6 +10,9 @@ def is_prime_number(x):
             return False
     return True
 
+print(is_prime_number(4))
+print(is_prime_number(7))
+
 # 하지만 이 알고리즘의 시간 복잡도는 O(X)로 굉장히 비효율적이다.
 # 알고리즘을 개선하기 위해서는 자연수의 약수가 가지는 특징을 파악하면 된다.
 
@@ -22,6 +25,9 @@ def improved_is_prime_number(x):
         if x % i == 0:
             return False
     return True
+
+print(improved_is_prime_number(4))
+print(improved_is_prime_number(7))
 
 # 하나의 수가 아닌 전체 수의 범위 안에서 존재하는 모든 소수를 찾기 위해서는
 # '에라토스테네스의 체' 알고리즘을 사용해야 한다.
