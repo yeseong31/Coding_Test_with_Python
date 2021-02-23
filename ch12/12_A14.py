@@ -9,7 +9,7 @@ def solution(n, weak, dist):
     per = list(permutations(dist, len(dist)))
     # 초기 answer 값은 주어진 친구 수보다 하나 더 큰 수로 지정
     answer = len(dist) + 1
-    # 취약 지점을 하나씩 확인
+    # 취약 지점을 하나씩 확인(탐색 시작 위치 w)
     for w in range(length):
         # 친구를 한 명씩 투입하여 확인
         for p in per:
